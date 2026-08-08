@@ -1,0 +1,5 @@
+# Default owners: the core team reviews everything.
+* @revert-labs/thecoreteam
+
+# Branding and vision docs are core-team too (no split needed at this size).
+docs/branding/ @revert-labs/thecoreteam

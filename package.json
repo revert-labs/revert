@@ -1,0 +1,26 @@
+{
+  "name": "@revert-labs/core",
+  "version": "0.1.0",
+  "description": "Revert — git for AI agent actions. Event-sourced action ledger + undo engine. Zero dependencies.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ai-agents",
+    "rollback",
+    "undo",
+    "event-sourcing",
+    "ledger",
+    "agent-safety",
+    "sdk"
+  ]
+}

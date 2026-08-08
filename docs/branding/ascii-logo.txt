@@ -1,0 +1,55 @@
+revert — ASCII logo (approved v1)
+=================================
+
+The Rewind-Branch: two commit dots, one trunk, a fork, and the
+branch that comes home. Dot = a committed action. The return
+path = rollback as replay, not a new action.
+
+PRIMARY MARK (as approved):
+
+               • ← commit
+
+┌─┐
+│ │
+│ └─┐
+│   │   ← the branch returns
+└───•
+
+revert - every action is a commit
+                                    (revert labs · git for AI agent actions)
+
+
+COMPACT MARK (CLI / small sizes):
+
+  ●
+  │
+  ├─╮
+  │ │
+  │ ╰───╮
+  │  ·  │
+  ●─────╯
+
+  revert — every action is a commit
+
+
+WIDE BANNER (docs headers / social):
+
+   •      ┌──────────────┐
+   │      │              │
+   ├─╮    │              │
+   │ │    │   every      │
+   │ ╰────╯   action is  │
+   │        a commit     │
+   ●─────────────────────╯
+
+
+Usage notes
+-----------
+- Monospace only (Cascadia Code, JetBrains Mono, SF Mono, Menlo).
+- Color, when available:
+    • commit dots + the return arc → safety green (#4ADE80)
+    • the fork junction → amber (#FBBF24) — the moment caught
+    • everything else → ink (#1E2433) on off-white (#F4F6FA)
+- Use the primary mark at 24pt+; compact mark below that; banner
+  in docs headers and social covers.
+- No resizing tricks in proportional fonts — monospace or nothing.

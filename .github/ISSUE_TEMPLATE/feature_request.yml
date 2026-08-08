@@ -1,0 +1,27 @@
+name: Feature request
+description: A capability revert should have
+title: "[feat]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What can't you do today? (If it's agent-undo related, say what the agent did wrong.)
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What should revert do, and how would you expect to use it?
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Where does this live?
+      options:
+        - SDK / ledger (open core)
+        - Undo engine
+        - Timeline / UI
+        - Compliance (enterprise)
+        - Other

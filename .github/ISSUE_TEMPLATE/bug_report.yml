@@ -1,0 +1,29 @@
+name: Bug report
+description: Something in revert is broken or behaves wrong
+title: "[bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Include the exact behavior, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal reproduction. Code snippets welcome.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Package version or commit sha.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Logs, links, anything else relevant.
