@@ -2,16 +2,15 @@
 
 > **git for AI agent actions — every action is a commit, anything can be rolled back.**
 
-```
-               • ← commit
+<p align="center">
+  <img src="docs/branding/logo.svg" width="380" alt="Revert — every action is a commit, anything can be rolled back">
+</p>
 
-┌─┐
-│ │
-│ └─┐
-│   │   ← the branch returns
-└───•
-revert - every action is a commit
-```
+[![CI](https://img.shields.io/github/actions/workflow/status/revert-labs/revert/ci.yml?branch=main&label=CI)](https://github.com/revert-labs/revert/actions/workflows/ci.yml)
+[![CodeQL](https://img.shields.io/github/actions/workflow/status/revert-labs/revert/codeql.yml?branch=main&label=CodeQL)](https://github.com/revert-labs/revert/security/code-scanning)
+[![License: Apache-2.0](https://img.shields.io/github/license/revert-labs/revert)](LICENSE)
+[![Issues](https://img.shields.io/github/issues/revert-labs/revert)](https://github.com/revert-labs/revert/issues)
+[![PRs](https://img.shields.io/github/issues-pr/revert-labs/revert)](https://github.com/revert-labs/revert/pulls)
 
 Revert makes AI agent failures **survivable**. Agents are probabilistic — they will
 eventually do something *plausible but wrong*: delete the wrong row, email the wrong
@@ -40,17 +39,20 @@ recorded as an immutable, replayable event — and anything can be rolled back.
 
 ## Status
 
-**Pre-flight / bootstrap.** The org and repos are live; the SDK is being scaffolded.
-Everything in `src/` is a stub until the first milestone lands (see `docs/vision.md`).
+**v0.1 — SDK MVP in progress.** The org and repos are live; the SDK is being
+scaffolded. Everything in `src/` is a stub until the first milestone lands.
+See [`docs/vision.md`](docs/vision.md) for the product and
+[`docs/roadmap.md`](docs/roadmap.md) for the 90-day plan.
 
 ## Repo layout
 
 ```
 docs/
   vision.md                  — the product vision & five design decisions
+  roadmap.md                 — the 90-day plan, phases, decision gates
   research/                  — sourced research (compensation patterns, ACRFence)
   adr/                       — architecture decision records
-  branding/                  — logo, ASCII mark, style notes
+  branding/                  — logo (SVG + ASCII), style notes
 src/                         — the SDK (ledger, tool wrapper, undo engine)
 test/                        — node:test smoke tests, zero dependencies
 ```
