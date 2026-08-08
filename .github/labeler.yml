@@ -1,11 +1,17 @@
-"docs":
-  - docs/**/*
-  - "**/*.md"
-"core":
-  - src/**/*
-"test":
-  - test/**/*
-"ci":
-  - .github/**/*
-"branding":
-  - docs/branding/**/*
+docs:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "docs/**/*"
+          - "**/*.md"
+core:
+  - changed-files:
+      - any-glob-to-any-file: "src/**/*"
+test:
+  - changed-files:
+      - any-glob-to-any-file: "test/**/*"
+ci:
+  - changed-files:
+      - any-glob-to-any-file: ".github/**/*"
+branding:
+  - changed-files:
+      - any-glob-to-any-file: "docs/branding/**/*"
