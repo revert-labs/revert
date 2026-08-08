@@ -32,7 +32,7 @@ test('ledger supports replay points (at seq N)', () => {
   assert.equal(beforeCharge[0].tool, 'create_invoice');
 });
 
-test('wrapAction currently passes through (v0.1 stub)', async () => {
+test('wrapAction keeps pass-through semantics', async () => {
   const fn = async (x) => x * 2;
   const wrapped = wrapAction('double', fn);
   assert.equal(await wrapped(21), 42);
