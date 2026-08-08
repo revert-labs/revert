@@ -16,11 +16,17 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
+            // Installation tokens can't resolve closed teams, so we request
+            // the dev team's human members by login (see .github/TEAMS.md).
+            // Keep this list in sync with the dev team membership.
+            const DEV_TEAM = ['MukundhArul', 'KishoreMuruganantham'];
             const pr = context.payload.pull_request;
             if (pr.draft) return;
+            const reviewers = DEV_TEAM.filter((login) => login !== pr.user.login);
+            if (reviewers.length === 0) return;
             await github.rest.pulls.requestReviewers({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: pr.number,
-              team_reviewers: ['thedevteam'],
+              reviewers,
             });
