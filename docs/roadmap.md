@@ -89,3 +89,4 @@ stolen from the moat.
 - [Roadmap board](https://github.com/orgs/revert-labs/projects/1) — the live kanban.
 - Issues tagged `good first issue` are the homework — the repo is the classroom
   (see [learning-path.md](learning-path.md)).
+# Verification PR — automation fix test
