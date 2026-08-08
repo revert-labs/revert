@@ -7,14 +7,13 @@ path = rollback as replay, not a new action.
 
 PRIMARY MARK (as approved):
 
-               • ← commit
-
-┌─┐
-│ │
-│ └─┐
-│   │   ← the branch returns
-└───•
-
+    ┌─┐        • ← commit
+    │ │        │
+    │ │   ┌────┘
+    │ │   │
+    └─┼───┘     ← the branch returns
+      │
+      •
 revert - every action is a commit
                                     (revert labs · git for AI agent actions)
 
