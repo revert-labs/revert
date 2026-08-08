@@ -1,0 +1,24 @@
+name: Stale
+
+on:
+  schedule:
+    - cron: "30 1 * * *"
+  workflow_dispatch:
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-issue-stale: 30
+          days-before-pr-stale: 21
+          days-before-close: 7
+          stale-issue-message: >
+            This issue has been idle for 30 days. If it's still relevant, drop a
+            comment; otherwise it'll close next week. Keep the board honest.
+          stale-pr-message: >
+            This PR has been idle. Please address review feedback or close it.

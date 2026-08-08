@@ -1,0 +1,27 @@
+name: Welcome
+
+on:
+  pull_request_target:
+    types: [opened]
+  issues:
+    types: [opened]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-message: |
+            Welcome to revert! 🎉 Thanks for opening your first PR.
+
+            A core-team member will review it — with reasoning, not just approval.
+            This repo is our classroom. See CONTRIBUTING.md for the flow.
+          issue-message: |
+            Thanks for opening your first issue! If it's a question, it belongs in
+            Discussions. If it's a bug or feature request, a core-team member will
+            triage it soon.

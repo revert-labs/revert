@@ -1,0 +1,11 @@
+"docs":
+  - docs/**/*
+  - "**/*.md"
+"core":
+  - src/**/*
+"test":
+  - test/**/*
+"ci":
+  - .github/**/*
+"branding":
+  - docs/branding/**/*
