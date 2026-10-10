@@ -13,7 +13,7 @@ jobs:
     if: github.actor != 'dependabot[bot]'
     steps:
       - name: Request dev team review
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             // Installation tokens can't resolve closed teams, so we request
